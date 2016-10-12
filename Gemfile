@@ -37,6 +37,9 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
+  gem "rspec-rails", "~> 3.5.1"
+  gem 'capybara'
+  gem 'factory_girl_rails', "~>4.5"
 end
 
 group :development do
