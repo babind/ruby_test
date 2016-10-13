@@ -1,23 +1,8 @@
 class ProjectsController < ApplicationController
   before_action :set_project ,except: [:index, :new, :create]
+
   def index
     @projects = Project.all
-  end
-
-  def new
-    @project = Project.new
-  end
-
-  def create
-    @project = Project.new(project_params)    
-    if @project.save
-        flash[:notice] = "Project has been created."
-        redirect_to @project
-    else
-      flash.now[:alert] = "Prject has not  been created."
-      render :new
-    end
-
   end
 
   def edit
@@ -33,13 +18,6 @@ class ProjectsController < ApplicationController
 
     flash[:notice] = "Project has been updated."
     redirect_to @project
-  end
-
-  def destroy
-    @project.destroy
-
-    flash[:notice] = "Project has been deleted."
-    redirect_to projects_path
   end
  
   private

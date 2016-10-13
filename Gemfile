@@ -30,7 +30,7 @@ gem "bootstrap-sass", "~> 3.3"
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem "font-awesome-rails", "~> 4.3"
